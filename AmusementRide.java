@@ -15,16 +15,17 @@ public class AmusementRide
 
     public boolean canRide()
     {
-        /* Implement the canRide method.  A rider can
-        ride this amusement park ride if they are:
-         - At least 10 years old
-         - At least 140 cm tall
-         - Does not have any health conditions
-         DO NOT CHANGE ANYTHING OTHER THAN THE CONTENTS
-         OF THIS METHOD.  DO NOT CHANGE ANY CODE IN THE MAIN
-         METHOD.  IF YOU GET ALL PASSES (THERE ARE 8 TESTS),
-         YOU WILL GET A PERFECT SCORE.  NO USE OF AI FOR THIS
-         PROJECT.
-        */
+        if (age<10) {
+            return false; //not old enough
+        }
+        if (height<140.0){
+            return false; //not tall enough
+        }
+        if (healthCondition==true){
+            return false; //unsafe for rider
+        }
+        else {
+            return true;
+        }
     }
 }
